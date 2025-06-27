@@ -17,9 +17,9 @@ export default function Settings() {
     <div className="min-h-screen bg-white">
       <Header />
       <div className="flex items-center justify-center w-full min-h-[calc(100vh-80px)]">
-        <div className="w-full max-w-xl mx-auto px-4 py-12 pt-32 overflow-y-auto" style={{ boxSizing: 'border-box' }}>
-          <h1 className="text-2xl md:text-3xl font-bold mb-8 text-left">Set up forms of payment</h1>
-          <div className="border-b mb-6" />
+        <div className="w-full max-w-xl mx-auto px-4 py-12 pt-36 overflow-y-auto" style={{ boxSizing: 'border-box' }}>
+          <h1 className="text-xl md:text-2xl font-bold mb-4 text-left">Set up forms of payment</h1>
+          <div className="border-b mb-6 -mx-8" />
           <form className="space-y-8">
             <section>
               <h2 className="text-lg font-semibold mb-4">Plans</h2>
