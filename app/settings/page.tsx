@@ -61,8 +61,8 @@ export default function Settings() {
                 <div className="text-xs text-gray-500">The amount monthly paid subscribers pay per month.</div>
               </div>
               <div className="flex items-center gap-2">
-                <input type="text" value={monthly} onChange={e => setMonthly(e.target.value)} className="w-20 border border-gray-300 rounded-sm px-2 py-1 text-base text-right focus:border-orange-500 focus:ring-0 outline-none transition" />
-                <select value={currency} onChange={e => setCurrency(e.target.value)} className="border border-gray-300 rounded-sm px-2 py-1 text-base focus:border-orange-500 focus:ring-0 outline-none transition">
+                <input type="text" value={monthly} onChange={e => setMonthly(e.target.value)} className="w-20 border border-gray-300 rounded-l-md rounded-r-none px-2 py-1 text-base text-right focus:border-orange-500 focus:ring-0 outline-none transition shadow-sm" />
+                <select value={currency} onChange={e => setCurrency(e.target.value)} className="border border-gray-300 border-l-0 rounded-r-md rounded-l-none -ml-px px-2 py-1 text-base focus:border-orange-500 focus:ring-0 outline-none transition shadow-sm">
                   {currencies.map(cur => <option key={cur} value={cur.toUpperCase()}>{cur.toUpperCase()}</option>)}
                 </select>
               </div>
@@ -74,8 +74,8 @@ export default function Settings() {
                 <div className="text-xs text-gray-500">The amount annual paid subscribers pay per year.</div>
               </div>
               <div className="flex items-center gap-2">
-                <input type="text" value={annual} onChange={e => setAnnual(e.target.value)} className="w-20 border border-gray-300 rounded-sm px-2 py-1 text-base text-right focus:border-orange-500 focus:ring-0 outline-none transition" />
-                <select value={currency} onChange={e => setCurrency(e.target.value)} className="border border-gray-300 rounded-sm px-2 py-1 text-base focus:border-orange-500 focus:ring-0 outline-none transition">
+                <input type="text" value={annual} onChange={e => setAnnual(e.target.value)} className="w-20 border border-gray-300 rounded-l-md rounded-r-none px-2 py-1 text-base text-right focus:border-orange-500 focus:ring-0 outline-none transition shadow-sm" />
+                <select value={currency} onChange={e => setCurrency(e.target.value)} className="border border-gray-300 border-l-0 rounded-r-md rounded-l-none -ml-px px-2 py-1 text-base focus:border-orange-500 focus:ring-0 outline-none transition shadow-sm">
                   {currencies.map(cur => <option key={cur} value={cur.toUpperCase()}>{cur.toUpperCase()}</option>)}
                 </select>
               </div>
@@ -87,8 +87,8 @@ export default function Settings() {
                 <div className="text-xs text-gray-500">The amount founding members pay per year. <a href="#" className="underline text-xs">Remove plan</a></div>
               </div>
               <div className="flex items-center gap-2">
-                <input type="text" value={founding} onChange={e => setFounding(e.target.value)} className="w-20 border border-gray-300 rounded-sm px-2 py-1 text-base text-right focus:border-orange-500 focus:ring-0 outline-none transition" />
-                <select value={currency} disabled className="border border-gray-300 rounded-sm px-2 py-1 text-base bg-gray-100 focus:border-orange-500 focus:ring-0 outline-none transition">
+                <input type="text" value={founding} onChange={e => setFounding(e.target.value)} className="w-20 border border-gray-300 rounded-l-md rounded-r-none px-2 py-1 text-base text-right focus:border-orange-500 focus:ring-0 outline-none transition shadow-sm" />
+                <select value={currency} disabled className="border border-gray-300 border-l-0 rounded-r-md rounded-l-none -ml-px px-2 py-1 text-base bg-gray-100 focus:border-orange-500 focus:ring-0 outline-none transition shadow-sm">
                   {currencies.map(cur => <option key={cur} value={cur.toUpperCase()}>{cur.toUpperCase()}</option>)}
                 </select>
               </div>
