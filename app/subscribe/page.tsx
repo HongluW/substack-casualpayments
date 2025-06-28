@@ -78,14 +78,37 @@ export default function SubscribePage() {
         {selectedTab === "One Time" && (
           <div className="mb-8 w-full flex flex-col items-center justify-center">
             <div className="w-full flex flex-col items-center justify-center min-h-[340px] border border-dashed border-gray-300 rounded-xl bg-gray-50 px-4 py-6 max-w-xl mx-auto">
-              <span className="text-base text-gray-700 mb-4">Make a one-time payment or donation!</span>
-              <div className="w-full">
-                <div className="font-semibold text-gray-900 mb-2 text-sm">What's included:</div>
-                <ul className="text-xs text-gray-600 space-y-1 list-disc list-inside">
-                  <li>Weekly deep dives into trending topics</li>
-                  <li>Actionable insights and expert interviews</li>
-                  <li>Access to a private archive of all past posts</li>
-                  <li>Community Q&amp;A and comment access</li>
+              <div className="text-center mb-4">
+                <div className="text-3xl font-bold text-gray-900">$2.00</div>
+                <p className="text-base text-gray-600">Support our investigative journalism with a one-time contribution!</p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-6 h-full">
+                <h3 className="font-semibold text-base mb-4">What's included:</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <span className="mr-3 mt-0.5">
+                      <svg width="16" height="16" fill="none" stroke="#f97316" strokeWidth="1.8" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" stroke="#f97316" /><polyline points="5,9 7,11 11,7" stroke="#f97316" strokeWidth="1.8" fill="none" /></svg>
+                    </span>
+                    <span>Exclusive access to Mayor Fuzzy's fan-selling schemes</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-3 mt-0.5">
+                      <svg width="16" height="16" fill="none" stroke="#f97316" strokeWidth="1.8" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" stroke="#f97316" /><polyline points="5,9 7,11 11,7" stroke="#f97316" strokeWidth="1.8" fill="none" /></svg>
+                    </span>
+                    <span>Behind-the-scenes coverage of tree-whispering politics</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-3 mt-0.5">
+                      <svg width="16" height="16" fill="none" stroke="#f97316" strokeWidth="1.8" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" stroke="#f97316" /><polyline points="5,9 7,11 11,7" stroke="#f97316" strokeWidth="1.8" fill="none" /></svg>
+                    </span>
+                    <span>Breaking news on penguin migration patterns</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-3 mt-0.5">
+                      <svg width="16" height="16" fill="none" stroke="#f97316" strokeWidth="1.8" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" stroke="#f97316" /><polyline points="5,9 7,11 11,7" stroke="#f97316" strokeWidth="1.8" fill="none" /></svg>
+                    </span>
+                    <span>Access to our complete archive of bureaucratic adventures</span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -97,7 +120,7 @@ export default function SubscribePage() {
               {plans.map((plan, idx) => (
                 <label
                   key={plan.key}
-                  className={`flex flex-col border rounded-xl px-6 py-6 cursor-pointer transition-all bg-white h-full min-h-[340px] justify-between ${selectedPlan === plan.key ? "border-green-600 shadow-md bg-green-50" : "border-gray-200"}`}
+                  className={`flex flex-col border rounded-xl px-6 py-6 cursor-pointer transition-all bg-white h-full min-h-[340px] justify-between ${selectedPlan === plan.key ? "border-orange-500 shadow-md bg-orange-50" : "border-gray-200"}`}
                   style={{ minWidth: 0 }}
                 >
                   <input
@@ -110,10 +133,10 @@ export default function SubscribePage() {
                   />
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className={`font-semibold text-base ${selectedPlan === plan.key ? "text-green-700" : "text-gray-900"}`}>{plan.name}</span>
+                      <span className={`font-semibold text-base ${selectedPlan === plan.key ? "text-orange-700" : "text-gray-900"}`}>{plan.name}</span>
                       {selectedPlan === plan.key && (
                         <span className="ml-2">
-                          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#16a34a" strokeWidth="2" fill="#fff"/><path d="M7 12.5l3 3 7-7" stroke="#16a34a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>
+                          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#f97316" strokeWidth="2" fill="#fff"/><path d="M7 12.5l3 3 7-7" stroke="#f97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>
                         </span>
                       )}
                     </div>
@@ -124,7 +147,7 @@ export default function SubscribePage() {
                           <span>{plan.isFree && i < 3 ? (
                             <svg width="16" height="16" fill="none" stroke="#808080" strokeWidth="1.8" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" stroke="#808080" /><line x1="6" y1="6" x2="10" y2="10" stroke="#808080" /><line x1="10" y1="6" x2="6" y2="10" stroke="#808080" /></svg>
                           ) : (
-                            <svg width="16" height="16" fill="none" stroke="#419E4E" strokeWidth="1.8" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" stroke="#419E4E" /><polyline points="5,9 7,11 11,7" stroke="#419E4E" strokeWidth="1.8" fill="none" /></svg>
+                            <svg width="16" height="16" fill="none" stroke="#f97316" strokeWidth="1.8" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" stroke="#f97316" /><polyline points="5,9 7,11 11,7" stroke="#f97316" strokeWidth="1.8" fill="none" /></svg>
                           )}</span>
                           <span>{benefit}</span>
                         </li>
@@ -154,9 +177,9 @@ export default function SubscribePage() {
         </div>
         <div className="flex justify-center">
           {selectedTab === "One Time" ? (
-            <button className="w-60 bg-green-600 hover:bg-green-700 text-white font-medium py-3 rounded transition">Purchase</button>
+            <button className="w-60 bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 rounded transition">Purchase</button>
           ) : (
-            <button className="w-60 bg-green-600 hover:bg-green-700 text-white font-medium py-3 rounded transition">Subscribe</button>
+            <button className="w-60 bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 rounded transition">Subscribe</button>
           )}
         </div>
         <div className="text-center mt-4">
@@ -165,6 +188,7 @@ export default function SubscribePage() {
         <div className="text-xs text-gray-400 mt-6 text-center">
           By registering you agree to our <a href="https://substack.com/tos?utm_source=subscribe" target="_blank" rel="noopener" className="underline">Terms of Service</a>, <a href="https://substack.com/privacy?utm_source=subscribe" target="_blank" rel="noopener" className="underline">Privacy Policy</a>, and <a href="https://substack.com/ccpa?utm_source=subscribe#personal-data-collected" target="_blank" rel="noopener" className="underline">Information Collection Notice</a>.
         </div>
+        <p className="text-base text-gray-600 mb-6">Choose your subscription plan and payment frequency.</p>
       </div>
     </div>
   );
