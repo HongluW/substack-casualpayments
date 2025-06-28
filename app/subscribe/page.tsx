@@ -58,13 +58,13 @@ export default function SubscribePage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-white py-12">
       <div className="w-full max-w-6xl mx-auto bg-white p-2 sm:p-8">
-        <h2 className="text-3xl font-bold text-center mb-8">Choose a subscription plan</h2>
-        <div className="flex justify-center gap-3 mb-8">
+        <h2 className="text-2xl font-bold text-center mb-8">Choose a subscription plan</h2>
+        <div className="flex justify-center gap-2 mb-8">
           {planTypeTabs.map(tab => (
             <button
               key={tab}
               type="button"
-              className={`px-6 py-2 rounded-full font-medium text-base transition-colors whitespace-nowrap
+              className={`px-5 py-1.5 rounded-full font-medium text-sm transition-colors whitespace-nowrap
                 ${selectedTab === tab
                   ? "bg-gray-800 text-white"
                   : "bg-gray-100 text-gray-500"}
@@ -76,8 +76,19 @@ export default function SubscribePage() {
           ))}
         </div>
         {selectedTab === "One Time" && (
-          <div className="mb-8 w-full flex flex-col items-center justify-center min-h-[200px] border border-dashed border-gray-300 rounded-xl bg-gray-50">
-            <span className="text-lg text-gray-700 py-12">Make a one-time payment or donation!</span>
+          <div className="mb-8 w-full flex flex-col items-center justify-center">
+            <div className="w-full flex flex-col items-center justify-center min-h-[340px] border border-dashed border-gray-300 rounded-xl bg-gray-50 px-4 py-6 max-w-xl mx-auto">
+              <span className="text-base text-gray-700 mb-4">Make a one-time payment or donation!</span>
+              <div className="w-full">
+                <div className="font-semibold text-gray-900 mb-2 text-sm">What's included:</div>
+                <ul className="text-xs text-gray-600 space-y-1 list-disc list-inside">
+                  <li>Weekly deep dives into trending topics</li>
+                  <li>Actionable insights and expert interviews</li>
+                  <li>Access to a private archive of all past posts</li>
+                  <li>Community Q&amp;A and comment access</li>
+                </ul>
+              </div>
+            </div>
           </div>
         )}
         {selectedTab === "Individual" && (
@@ -99,17 +110,17 @@ export default function SubscribePage() {
                   />
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className={`font-semibold text-lg ${selectedPlan === plan.key ? "text-green-700" : "text-gray-900"}`}>{plan.name}</span>
+                      <span className={`font-semibold text-base ${selectedPlan === plan.key ? "text-green-700" : "text-gray-900"}`}>{plan.name}</span>
                       {selectedPlan === plan.key && (
                         <span className="ml-2">
                           <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#16a34a" strokeWidth="2" fill="#fff"/><path d="M7 12.5l3 3 7-7" stroke="#16a34a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>
                         </span>
                       )}
                     </div>
-                    <div className="text-gray-500 text-base font-normal mb-4">{plan.price}</div>
-                    <ul className="text-sm space-y-2 mb-2">
+                    <div className="text-gray-500 text-sm font-normal mb-4">{plan.price}</div>
+                    <ul className="text-xs space-y-2 mb-2">
                       {plan.benefits.map((benefit, i) => (
-                        <li key={i} className={`flex items-center gap-2 text-gray-500 ${plan.isFree && i < 3 ? "line-through text-gray-400" : ""}`}>
+                        <li key={i} className={`flex items-center gap-2 text-gray-500 ${plan.isFree && i < 3 ? "line-through text-gray-400" : ""}`} style={{ fontSize: '0.95em' }}>
                           <span>{plan.isFree && i < 3 ? (
                             <svg width="16" height="16" fill="none" stroke="#808080" strokeWidth="1.8" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" stroke="#808080" /><line x1="6" y1="6" x2="10" y2="10" stroke="#808080" /><line x1="10" y1="6" x2="6" y2="10" stroke="#808080" /></svg>
                           ) : (
@@ -127,17 +138,19 @@ export default function SubscribePage() {
         )}
         {selectedTab === "Group" && (
           <div className="mb-8 w-full flex flex-col items-center justify-center min-h-[200px] border border-dashed border-gray-300 rounded-xl bg-gray-50">
-            <span className="text-lg text-gray-700 py-12">Group subscription options coming soon!</span>
+            <span className="text-base text-gray-700 py-12">Group subscription options coming soon!</span>
           </div>
         )}
         {selectedTab === "Gift" && (
           <div className="mb-8 w-full flex flex-col items-center justify-center min-h-[200px] border border-dashed border-gray-300 rounded-xl bg-gray-50">
-            <span className="text-lg text-gray-700 py-12">Gift a subscription to someone special!</span>
+            <span className="text-base text-gray-700 py-12">Gift a subscription to someone special!</span>
           </div>
         )}
-        <div className="flex items-center justify-center gap-3 mb-6">
-          <svg width="32" height="21" viewBox="0 0 32 21" fill="none" className=""><rect x="0" y="0" width="32" height="21" rx="4" fill="#515e80" opacity="0.2" /><rect x="2" y="5" width="8" height="11" rx="1" fill="#fff" opacity="0.5" /><rect x="12" y="5" width="8" height="11" rx="1" fill="#fff" opacity="0.5" /><rect x="22" y="5" width="8" height="11" rx="1" fill="#fff" opacity="0.5" /></svg>
-          <span className="text-lg tracking-widest">**** **** **** 9999</span>
+        <div className="flex justify-center mb-6">
+          <div className="inline-flex items-center gap-3 p-4 border border-orange-200 rounded-lg">
+            <svg width="32" height="21" viewBox="0 0 32 21" fill="none" className=""><rect x="0" y="0" width="32" height="21" rx="4" fill="#515e80" opacity="0.2" /><rect x="2" y="5" width="8" height="11" rx="1" fill="#fff" opacity="0.5" /><rect x="12" y="5" width="8" height="11" rx="1" fill="#fff" opacity="0.5" /><rect x="22" y="5" width="8" height="11" rx="1" fill="#fff" opacity="0.5" /></svg>
+            <span className="text-lg tracking-widest">**** **** **** 9999</span>
+          </div>
         </div>
         <div className="flex justify-center">
           {selectedTab === "One Time" ? (
