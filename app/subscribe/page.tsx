@@ -106,10 +106,10 @@ export default function SubscribePage() {
                         </span>
                       )}
                     </div>
-                    <div className="text-gray-500 text-base font-medium mb-4">{plan.price}</div>
+                    <div className="text-gray-500 text-base font-normal mb-4">{plan.price}</div>
                     <ul className="text-sm space-y-2 mb-2">
                       {plan.benefits.map((benefit, i) => (
-                        <li key={i} className={`flex items-center gap-2 ${plan.isFree && i < 3 ? "line-through text-gray-400" : ""}`}>
+                        <li key={i} className={`flex items-center gap-2 text-gray-500 ${plan.isFree && i < 3 ? "line-through text-gray-400" : ""}`}>
                           <span>{plan.isFree && i < 3 ? (
                             <svg width="16" height="16" fill="none" stroke="#808080" strokeWidth="1.8" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" stroke="#808080" /><line x1="6" y1="6" x2="10" y2="10" stroke="#808080" /><line x1="10" y1="6" x2="6" y2="10" stroke="#808080" /></svg>
                           ) : (
@@ -140,7 +140,11 @@ export default function SubscribePage() {
           <span className="text-lg tracking-widest">**** **** **** 9999</span>
         </div>
         <div className="flex justify-center">
-          <button className="w-60 bg-green-600 hover:bg-green-700 text-white font-medium py-3 rounded transition">Subscribe</button>
+          {selectedTab === "One Time" ? (
+            <button className="w-60 bg-green-600 hover:bg-green-700 text-white font-medium py-3 rounded transition">Purchase</button>
+          ) : (
+            <button className="w-60 bg-green-600 hover:bg-green-700 text-white font-medium py-3 rounded transition">Subscribe</button>
+          )}
         </div>
         <div className="text-center mt-4">
           <a href="#" className="text-sm text-gray-500 underline">Other payment options...</a>
