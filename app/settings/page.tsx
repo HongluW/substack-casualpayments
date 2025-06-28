@@ -26,6 +26,8 @@ export default function Settings() {
   const [inAppPayments, setInAppPayments] = useState(true);
   const [directDebit, setDirectDebit] = useState(true);
   const [localizePrices, setLocalizePrices] = useState(true);
+  const [donationsEnabled, setDonationsEnabled] = useState(true);
+  const [pageBillingEnabled, setPageBillingEnabled] = useState(true);
 
   // Helper for editable benefit lists
   const handleBenefitChange = (
@@ -108,6 +110,27 @@ export default function Settings() {
                 <div className="text-xs text-gray-500 max-w-xs">Allow founding members to select an amount less than suggested, but more than your annual plan.</div>
               </div>
               <button type="button" aria-pressed={flexible} onClick={() => setFlexible(f => !f)} className={`ml-4 w-10 h-6 flex items-center rounded-full transition-colors duration-200 ${flexible ? 'bg-orange-500' : 'bg-gray-300'}`}> <span className={`inline-block w-5 h-5 bg-white rounded-full shadow transform transition-transform duration-200 ${flexible ? 'translate-x-4' : ''}`}></span></button>
+            </div>
+            
+            {/* One time payments */}
+            <div className="text-lg font-bold pb-4 pt-4">One time payments</div>
+
+            {/* Donations */}
+            <div className="flex flex-row gap-5 min-h-12 items-center mb-4">
+              <div className="flex flex-col flex-grow gap-0.5">
+                <div className="font-normal text-sm">Enable donations</div>
+                <div className="text-xs text-gray-500">Allow readers to make one-time donations to support your publication.</div>
+              </div>
+              <button type="button" aria-pressed={donationsEnabled} onClick={() => setDonationsEnabled(d => !d)} className={`ml-4 w-10 h-6 flex items-center rounded-full transition-colors duration-200 ${donationsEnabled ? 'bg-orange-500' : 'bg-gray-300'}`}> <span className={`inline-block w-5 h-5 bg-white rounded-full shadow transform transition-transform duration-200 ${donationsEnabled ? 'translate-x-4' : ''}`}></span></button>
+            </div>
+
+            {/* Page-based Billing */}
+            <div className="flex flex-row gap-5 min-h-12 items-center mb-4">
+              <div className="flex flex-col flex-grow gap-0.5">
+                <div className="font-normal text-sm">Enable page-based billing</div>
+                <div className="text-xs text-gray-500">Charge readers based on the number of premium pages they access.</div>
+              </div>
+              <button type="button" aria-pressed={pageBillingEnabled} onClick={() => setPageBillingEnabled(p => !p)} className={`ml-4 w-10 h-6 flex items-center rounded-full transition-colors duration-200 ${pageBillingEnabled ? 'bg-orange-500' : 'bg-gray-300'}`}> <span className={`inline-block w-5 h-5 bg-white rounded-full shadow transform transition-transform duration-200 ${pageBillingEnabled ? 'translate-x-4' : ''}`}></span></button>
             </div>
           </div>
           <div className="-mx-5"><hr className="border-gray-200" /></div>
