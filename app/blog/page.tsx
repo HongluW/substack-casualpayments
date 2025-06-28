@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Search, MessageCircle, Bell, Heart, MessageSquare, Repeat2, MoreHorizontal, ChevronLeft, Share2 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function BlogPage() {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
@@ -56,7 +57,7 @@ export default function BlogPage() {
             {/* Center - Publication Name */}
             <div className="absolute left-1/2 transform -translate-x-1/2">
               <h1 className="font-medium text-gray-900 text-xl" style={{ fontFamily: "Georgia, serif" }}>
-                The Generalist
+                The Bureaucrat Gazette
               </h1>
             </div>
             
@@ -91,21 +92,21 @@ export default function BlogPage() {
             className="text-4xl md:text-5xl text-gray-900 mb-6 leading-tight"
             style={{ fontFamily: "Georgia, serif" }}
           >
-            No Rivals: The Founders Fund Story (Part I)
+            No Scandals: The Mayor's Fund Story (Part I)
           </h1>
-          <h2 className="text-xl text-gray-600 mb-6 leading-relaxed">
-            Founders Fund, led by Peter Thiel, has ascended to the pinnacle of Silicon Valley. Its fundamental genius is wanting differently.
+          <h2 className="text-sm text-gray-500 mb-6 leading-snug">
+            Mayor Fuzzy McLobbyist, led by Vice President Sally Filibuster, has ascended to the pinnacle of City Hall. Its fundamental genius is wanting donuts at every meeting.
           </h2>
           
           {/* Author Info */}
           <div className="flex items-center gap-3 mb-6">
             <Avatar className="w-10 h-10">
-              <AvatarImage src="/placeholder-user.jpg" alt="Mario Gabriele" />
-              <AvatarFallback>MG</AvatarFallback>
+              <AvatarImage src="/placeholder-user.jpg" alt="Bobby Filibuster" />
+              <AvatarFallback>BF</AvatarFallback>
             </Avatar>
             <div>
-              <div className="text-sm font-medium text-gray-900">Mario Gabriele</div>
-              <div className="text-sm text-gray-500">Jun 12, 2025 • Paid</div>
+              <div className="text-sm font-medium text-gray-900">Bobby Filibuster</div>
+              <div className="text-sm text-gray-500">Apr 1, 2026 • Paid</div>
             </div>
           </div>
           
@@ -139,23 +140,11 @@ export default function BlogPage() {
         {/* Subscribe Widget */}
         <div className="bg-orange-50 border border-orange-200 rounded-lg p-6 mb-8">
           <p className="text-sm text-gray-600 mb-4">
-            <em>"The Generalist offers the most in-depth, well-researched, and thought-provoking insights." — Alya, a paying member</em>
+            <em>"Unlock the rest of this story and support more donut-fueled journalism. Join the fun!"</em>
           </p>
           <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">
-            Upgrade to paid
+            Get full access
           </Button>
-        </div>
-
-        {/* Hero Image */}
-        <div className="mb-8">
-          <img 
-            src="/placeholder.jpg" 
-            alt="Founders Fund Story" 
-            className="w-full h-96 object-cover rounded-lg"
-          />
-          <p className="text-sm text-gray-500 mt-2 text-center">
-            Illustration by Edmon de Haro, photograph by Gage Skidmore
-          </p>
         </div>
 
         {/* Article Content */}
@@ -163,75 +152,61 @@ export default function BlogPage() {
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
             Friends,
           </p>
-          
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            In January of 2024, we asked you, our readers, which startup or venture fund you most wanted us to cover in a deep dive. The answer was unequivocal: Founders Fund.
+            In the wild and windy city of Blusterburg, Mayor Fuzzy McLobbyist's campaign was unlike any other. Instead of the usual bake sales and rubber chicken dinners, the mayor funded his entire campaign by selling battery-powered fans to penguins at the local zoo. "Penguins love a good breeze," he declared, as he handed out fans with his face on them to every tuxedoed bird in sight.
           </p>
-          
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            Over the past 18 months, we've been working on that story. Today, at long last, we're sharing the fruits of those efforts.
+            But that was only the beginning. When the penguins ran out of pockets to store their fans, the mayor turned to the city's ancient oak trees for advice. Every Tuesday at dawn, he could be found in the park, whispering his campaign slogans to the trees and listening intently for their wooden wisdom. "The secret to a successful campaign," he confided to a particularly knotty elm, "is to always leaf your options open."
           </p>
-          
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            "No Rivals" is a four-part series spanning more than 35,000 words. It will run over the next four weeks. It's the most comprehensive examination of Silicon Valley's most controversial venture firm, its extraordinary performance, and its remarkable cultural influence. The series is the product of extensive research, interviews with more than a dozen key figures, and a detailed analysis of Founders Fund's previously undisclosed returns.
-          </p>
-          
-          <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            It's a story featuring globally visible characters—Thiel, Musk, Altman, Zuckerberg, Trump—and secretive power brokers who shun the spotlight. It's a story of philosophy and technology, spite and vision, political maneuvering and spectacular windfalls.
+            Soon, word spread that the mayor's campaign was powered by both cool breezes and deep-rooted conversations. Voters were charmed, penguins were refreshed, and the trees—well, they stood a little taller, proud to have played a part in the most unusual election Blusterburg had ever seen.
           </p>
 
           {/* Subscribe Widget in Content */}
           <div className="bg-orange-50 border border-orange-200 rounded-lg p-6 my-8">
-            <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">
-              Upgrade to paid
-            </Button>
+            <Link href="/subscribe">
+              <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">
+                Get full access
+              </Button>
+            </Link>
           </div>
 
           <hr className="my-8 border-gray-200" />
 
           <h1 className="text-3xl font-bold text-gray-900 mb-6" style={{ fontFamily: "Georgia, serif" }}>
-            Part I: The Prophet
+            Part I: The Penguin Parade
           </h1>
 
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            Peter Thiel was nowhere to be seen.
+            On the first day of campaign season, Mayor Fuzzy McLobbyist donned his finest top hat and marched straight to the zoo, where the annual Penguin Parade was about to begin. The air was electric, the fish were fresh, and the penguins were ready to waddle for democracy.
           </p>
 
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            On January 20, escaping a bitter winter storm, America's most powerful gathered beneath the Capitol dome to celebrate Donald J. Trump's inauguration as the 47th president.
+            As the mayor handed out fans to the penguins, a hush fell over the crowd. Would the penguins accept the fans? Would they endorse the mayor's donut agenda? Suddenly, Paddles the Penguin, known for his impeccable sense of style and his ability to balance a sardine on his beak, stepped forward and gave a resounding squawk of approval.
           </p>
 
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            The usual suspects were in attendance, mingling with a new guard: UFC impresario Dana White lurking a few feet behind Barack Obama, George W. Bush a simple football toss away from Joe Rogan, OpenAI's Sam Altman conversing excitedly with influencer Logan Paul. Welcome to the New America; you don't need a podcast to work here, but it helps.
+            The crowd erupted in applause. The trees rustled their leaves in excitement. Even the squirrels paused their acorn business to watch the spectacle. It was clear: the mayor's campaign was off to a flapping good start, and Blusterburg would never be the same.
           </p>
 
-          <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            If you have even a passing interest in technology and venture capital, it is difficult to review photos from the event and not think of Thiel. He does not appear once, and yet he is everywhere.
-          </p>
-
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8" style={{ fontFamily: "Georgia, serif" }}>
-            Pals
-          </h2>
-
-          <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            If you do not want to work for Peter Thiel, you must avoid meeting him.
-          </p>
-
-          <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            The French diplomat Charles-Maurice de Talleyrand-Périgord, Napoleon's foreign minister, was said to be so interesting, so charming, that it was almost dangerous to spend too much time in his company. Contemporaries described his smile as "paralyzing," while the salonist Madame de Staël, no stranger to grandiloquence, gushed of Talleyrand, "If his conversation was for sale, I should ruin myself."
-          </p>
-
-          <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            Peter Thiel seems to have a similarly transfixing effect. In studying Founders Fund's origins, evidence of this referent power appeared repeatedly: a chance encounter with Thiel bewitching the listener to move cities, forgo prestige, and alter career plans, to spend a little more time in the strange moonlight of his mind.
-          </p>
+          {/* Subscribe Widget in Content */}
+          <div className="bg-orange-50 border border-orange-200 rounded-lg p-6 my-8">
+            <Link href="/subscribe">
+              <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">
+                Get full access
+              </Button>
+            </Link>
+          </div>
 
           {/* Paywall */}
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 text-center my-8">
             <p className="text-gray-600 mb-2">Hi <strong>reader@example.com</strong></p>
             <h3 className="text-xl font-bold text-gray-900 mb-4">This post is for paid subscribers</h3>
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white mb-4">
-              Upgrade to paid
-            </Button>
+            <Link href="/subscribe">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white mb-4">
+                Upgrade to paid
+              </Button>
+            </Link>
             <p className="text-sm text-gray-600">
               Already a paid subscriber? <a href="#" className="font-semibold text-gray-900 underline">Switch accounts</a>
             </p>
