@@ -152,20 +152,6 @@ export default function BlogPage() {
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
             Soon, word spread that the mayor's campaign was powered by both cool breezes and deep-rooted conversations. Voters were charmed, penguins were refreshed, and the trees—well, they stood a little taller, proud to have played a part in the most unusual election Blusterburg had ever seen.
           </p>
-          {/* Buy a Coffee Block (Paywall Replacement) */}
-          <div className="flex items-center bg-white border border-gray-200 rounded-xl shadow-sm p-4 my-8">
-            <img src="/flag-icon.svg" alt="Flag Icon" className="w-16 h-16 rounded-md object-cover mr-4" />
-            <div className="flex-1">
-              <div className="font-semibold text-lg text-gray-900 mb-1">Support your favorite writer by buying them a coffee!</div>
-              <div className="text-gray-500 text-sm mb-2">Every coffee helps keep the stories flowing.</div>
-            </div>
-            <button
-              className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-2 rounded-lg text-base transition"
-              onClick={() => setShowCoffeeModal(true)}
-            >
-              Buy a coffee
-            </button>
-          </div>
 
           {/* Buy a Coffee Modal */}
           {showCoffeeModal && (
