@@ -142,9 +142,11 @@ export default function BlogPage() {
           <p className="text-sm text-gray-600 mb-4">
             <em>"Unlock the rest of this story and support more donut-fueled journalism. Join the fun!"</em>
           </p>
-          <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">
-            Get full access
-          </Button>
+            <Link href="/subscribe">
+              <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">
+                Get full access
+              </Button>
+            </Link>
         </div>
 
         {/* Article Content */}
