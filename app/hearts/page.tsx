@@ -14,7 +14,7 @@ export default function HeartsPage() {
   const [showCoffeeModal, setShowCoffeeModal] = useState(false);
   const [coffeeQty, setCoffeeQty] = useState(1);
   const [message, setMessage] = useState("");
-  const coffeePrice = 4.99;
+  const coffeePrice = 1;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -161,18 +161,18 @@ export default function HeartsPage() {
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
             The crowd erupted in applause. The trees rustled their leaves in excitement. Even the squirrels paused their acorn business to watch the spectacle. It was clear: the mayor's campaign was off to a flapping good start, and Blusterburg would never be the same.
           </p>
-          {/* Buy a Coffee Block (Paywall Replacement) - At the very end */}
+          {/* Give Some Love Block (Paywall Replacement) - At the very end */}
           <div className="flex items-center bg-white border border-gray-200 rounded-xl shadow-sm p-4 my-8">
-            <img src="/flag-icon.svg" alt="flag" className="w-12 h-12 mx-4 mb-4 block" />
+            <span className="text-5xl mx-4 mb-4 block" role="img" aria-label="love">❤️</span>
             <div className="flex-1">
-              <div className="font-semibold text-lg text-gray-900 mb-1">Support your favorite writer by buying them a coffee!</div>
-              <div className="text-gray-500 text-sm mb-2">Every coffee helps keep the stories flowing.</div>
+              <div className="font-semibold text-lg text-gray-900 mb-1">Support your favorite writer by giving them some love!</div>
+              <div className="text-gray-500 text-sm mb-2">Every bit of love helps keep the stories flowing.</div>
             </div>
             <button
               className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-2 rounded-lg text-base transition"
               onClick={() => setShowCoffeeModal(true)}
             >
-              Buy a coffee
+              Give some love
             </button>
           </div>
           {/* Buy a Coffee Modal - Orange Theme, Interactive */}
@@ -180,12 +180,12 @@ export default function HeartsPage() {
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
               <div className="bg-white rounded-xl shadow-lg p-6 max-w-md w-full text-center relative flex flex-col items-center">
                 <div className="w-full flex flex-col items-center">
-                  <span className="text-5xl mb-2 block" role="img" aria-label="coffee">☕️</span>
-                  <h2 className="text-2xl font-extrabold text-gray-900 mb-2">Buy <span className="text-orange-500">Your Writer</span> a coffee</h2>
+                  <span className="text-5xl mb-2 block" role="img" aria-label="love">❤️</span>
+                  <h2 className="text-2xl font-extrabold text-gray-900 mb-2">Give <span className="text-orange-500">Your Writer</span> some love</h2>
                 </div>
                 <div className="w-full flex justify-center mb-4">
                   <div className="flex flex-wrap items-center bg-orange-50 rounded-lg px-4 py-3 gap-x-2 gap-y-2 w-full justify-center">
-                    <span className="text-3xl mr-3" role="img" aria-label="coffee">☕️</span>
+                    <span className="text-3xl mr-3" role="img" aria-label="love">❤️</span>
                     <span className="text-lg font-semibold text-gray-700 mr-2">${coffeePrice}</span>
                     <span className="text-gray-500 mr-2">x</span>
                     <input
@@ -221,7 +221,7 @@ export default function HeartsPage() {
                   className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-lg text-lg transition mb-2"
                   onClick={() => setShowCoffeeModal(false)}
                 >
-                  Support  ${Math.ceil(coffeeQty * coffeePrice)}
+                  Send Love  ${Math.ceil(coffeeQty * coffeePrice)}
                 </button>
                 <button
                   className="absolute top-2 right-2 text-gray-400 hover:text-gray-700 text-xl font-bold px-2"
