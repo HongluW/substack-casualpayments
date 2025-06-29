@@ -59,7 +59,7 @@ export default function SubscribePage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-white py-12">
       <div className="absolute top-6 left-6">
-        <Link href="/" className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
+        <Link href="/blog" className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M19 12H5M12 19l-7-7 7-7"/>
           </svg>
@@ -70,7 +70,7 @@ export default function SubscribePage() {
         <div className="flex justify-center mb-4">
           <img src="/flag-icon.svg" alt="Flag Icon" className="w-12 h-12" />
         </div>
-        <h2 className="text-3xl font-extrabold text-center mb-8">Choose a subscription plan</h2>
+        <h2 className="text-3xl font-extrabold text-center mb-8">Choose a plan</h2>
         <div className="flex justify-center gap-2 mb-8">
           {planTypeTabs.map(tab => (
             <button
