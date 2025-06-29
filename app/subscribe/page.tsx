@@ -76,40 +76,17 @@ export default function SubscribePage() {
           ))}
         </div>
         {selectedTab === "One Time" && (
-          <div className="mb-8 w-full flex flex-col items-center justify-center">
-            <div className="w-full flex flex-col items-center justify-center min-h-[340px] border border-dashed border-gray-300 rounded-xl bg-gray-50 px-4 py-6 max-w-xl mx-auto">
-              <div className="text-center mb-4">
-                <div className="text-3xl font-bold text-gray-900">$2.00</div>
-                <p className="text-base text-gray-600">Support our investigative journalism with a one-time contribution!</p>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-6 h-full">
-                <h3 className="font-semibold text-base mb-4">What's included:</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="mr-3 mt-0.5">
-                      <svg width="16" height="16" fill="none" stroke="#f97316" strokeWidth="1.8" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" stroke="#f97316" /><polyline points="5,9 7,11 11,7" stroke="#f97316" strokeWidth="1.8" fill="none" /></svg>
-                    </span>
-                    <span>Exclusive access to Mayor Fuzzy's fan-selling schemes</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-3 mt-0.5">
-                      <svg width="16" height="16" fill="none" stroke="#f97316" strokeWidth="1.8" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" stroke="#f97316" /><polyline points="5,9 7,11 11,7" stroke="#f97316" strokeWidth="1.8" fill="none" /></svg>
-                    </span>
-                    <span>Behind-the-scenes coverage of tree-whispering politics</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-3 mt-0.5">
-                      <svg width="16" height="16" fill="none" stroke="#f97316" strokeWidth="1.8" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" stroke="#f97316" /><polyline points="5,9 7,11 11,7" stroke="#f97316" strokeWidth="1.8" fill="none" /></svg>
-                    </span>
-                    <span>Breaking news on penguin migration patterns</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-3 mt-0.5">
-                      <svg width="16" height="16" fill="none" stroke="#f97316" strokeWidth="1.8" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" stroke="#f97316" /><polyline points="5,9 7,11 11,7" stroke="#f97316" strokeWidth="1.8" fill="none" /></svg>
-                    </span>
-                    <span>Access to our complete archive of bureaucratic adventures</span>
-                  </li>
-                </ul>
+          <div className="mb-4 w-full flex flex-col items-center justify-center">
+            <div className="w-full max-w-xs mx-auto min-h-[340px] border border-gray-300 rounded-xl bg-white flex items-center justify-center">
+              <div className="text-center py-8 px-6">
+                <div className="text-3xl font-semibold text-gray-600 mb-2">$2.00</div>
+                <p className="text-base text-gray-700 mb-4">Support our investigative journalism with a one-time contribution!</p>
+                <div className="text-sm text-gray-600 space-y-1">
+                  <div>• Full access to "Mayor Fuzzy's Fan Empire" story</div>
+                  <div>• Complete article with all exclusive details</div>
+                  <div>• Behind-the-scenes interviews with the trees</div>
+                  <div>• Exclusive photos of penguin fan demonstrations</div>
+                </div>
               </div>
             </div>
           </div>
@@ -140,8 +117,8 @@ export default function SubscribePage() {
                         </span>
                       )}
                     </div>
-                    <div className="text-gray-500 text-sm font-normal mb-4">{plan.price}</div>
-                    <ul className="text-xs space-y-2 mb-2">
+                    <div className="text-s font-normal text-gray-500 mb-2">{plan.price}</div>
+                    <ul className="text-sm space-y-2 mb-2">
                       {plan.benefits.map((benefit, i) => (
                         <li key={i} className={`flex items-center gap-2 text-gray-500 ${plan.isFree && i < 3 ? "line-through text-gray-400" : ""}`} style={{ fontSize: '0.95em' }}>
                           <span>{plan.isFree && i < 3 ? (
@@ -172,7 +149,7 @@ export default function SubscribePage() {
         <div className="flex justify-center mb-6">
           <div className="inline-flex items-center gap-3 p-4 border border-orange-200 rounded-lg">
             <svg width="32" height="21" viewBox="0 0 32 21" fill="none" className=""><rect x="0" y="0" width="32" height="21" rx="4" fill="#515e80" opacity="0.2" /><rect x="2" y="5" width="8" height="11" rx="1" fill="#fff" opacity="0.5" /><rect x="12" y="5" width="8" height="11" rx="1" fill="#fff" opacity="0.5" /><rect x="22" y="5" width="8" height="11" rx="1" fill="#fff" opacity="0.5" /></svg>
-            <span className="text-lg tracking-widest">**** **** **** 9999</span>
+            <span className="text-m tracking-widest">**** **** **** 9999</span>
           </div>
         </div>
         <div className="flex justify-center">
@@ -188,7 +165,6 @@ export default function SubscribePage() {
         <div className="text-xs text-gray-400 mt-6 text-center">
           By registering you agree to our <a href="https://substack.com/tos?utm_source=subscribe" target="_blank" rel="noopener" className="underline">Terms of Service</a>, <a href="https://substack.com/privacy?utm_source=subscribe" target="_blank" rel="noopener" className="underline">Privacy Policy</a>, and <a href="https://substack.com/ccpa?utm_source=subscribe#personal-data-collected" target="_blank" rel="noopener" className="underline">Information Collection Notice</a>.
         </div>
-        <p className="text-base text-gray-600 mb-6">Choose your subscription plan and payment frequency.</p>
       </div>
     </div>
   );
