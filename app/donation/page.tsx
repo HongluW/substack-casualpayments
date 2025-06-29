@@ -14,7 +14,7 @@ export default function BlogPage() {
   const [showCoffeeModal, setShowCoffeeModal] = useState(false);
   const [coffeeQty, setCoffeeQty] = useState(1);
   const [message, setMessage] = useState("");
-  const coffeePrice = 5;
+  const coffeePrice = 4.99;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -159,13 +159,13 @@ export default function BlogPage() {
           {/* Buy a Coffee Modal - Orange Theme, Interactive */}
           {showCoffeeModal && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
-              <div className="bg-white rounded-xl shadow-lg p-6 max-w-xs w-full text-center relative flex flex-col items-center">
+              <div className="bg-white rounded-xl shadow-lg p-6 max-w-md w-full text-center relative flex flex-col items-center">
                 <div className="w-full flex flex-col items-center">
                   <span className="text-5xl mb-2 block" role="img" aria-label="coffee">☕️</span>
                   <h2 className="text-2xl font-extrabold text-gray-900 mb-2">Buy <span className="text-orange-500">Your Writer</span> a coffee</h2>
                 </div>
-                <div className="w-full flex flex-col items-center bg-orange-50 rounded-lg py-3 px-2 mb-4">
-                  <div className="flex items-center justify-center w-full">
+                <div className="w-full flex justify-center mb-4">
+                  <div className="flex flex-wrap items-center bg-orange-50 rounded-lg px-4 py-3 gap-x-2 gap-y-2 w-full justify-center">
                     <span className="text-3xl mr-3" role="img" aria-label="coffee">☕️</span>
                     <span className="text-lg font-semibold text-gray-700 mr-2">${coffeePrice}</span>
                     <span className="text-gray-500 mr-2">x</span>
@@ -174,7 +174,8 @@ export default function BlogPage() {
                       min={1}
                       value={coffeeQty}
                       onChange={e => setCoffeeQty(Math.max(1, parseInt(e.target.value) || 1))}
-                      className="w-12 text-center border border-gray-300 rounded px-1 py-0.5 mr-3 focus:outline-none focus:ring-2 focus:ring-orange-200"
+                      className="w-12 min-w-0 text-center border border-gray-300 rounded px-1 py-0.5 mx-2 focus:outline-none focus:ring-2 focus:ring-orange-200 appearance-none hide-number-input-arrows"
+                      style={{ MozAppearance: 'textfield' }}
                     />
                     {[1, 3, 5].map(n => (
                       <button
@@ -190,7 +191,7 @@ export default function BlogPage() {
                 </div>
                 <div className="w-full flex flex-col items-center mb-4">
                   <textarea
-                    className="w-full border border-gray-200 rounded-lg p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-200"
+                    className="w-full border border-gray-200 rounded-lg p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-200 h-20"
                     rows={2}
                     placeholder="Say something nice.. (optional)"
                     value={message}
@@ -201,7 +202,7 @@ export default function BlogPage() {
                   className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-lg text-lg transition mb-2"
                   onClick={() => setShowCoffeeModal(false)}
                 >
-                  Support  ${coffeeQty * coffeePrice}
+                  Support  ${Math.ceil(coffeeQty * coffeePrice)}
                 </button>
                 <button
                   className="absolute top-2 right-2 text-gray-400 hover:text-gray-700 text-xl font-bold px-2"
@@ -260,6 +261,20 @@ export default function BlogPage() {
           </div>
         </article>
       </main>
+
+      {/* Hide number input arrows for all browsers */}
+      <style jsx global>{`
+        /* Chrome, Safari, Edge, Opera */
+        input[type=number].hide-number-input-arrows::-webkit-inner-spin-button, 
+        input[type=number].hide-number-input-arrows::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        /* Firefox */
+        input[type=number].hide-number-input-arrows {
+          -moz-appearance: textfield;
+        }
+      `}</style>
     </div>
   );
 } 
