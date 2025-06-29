@@ -91,7 +91,8 @@ export default function SubscribePage() {
           <div className="mb-4 w-full flex flex-col items-center justify-center">
             <div className="w-full max-w-xs mx-auto min-h-[340px] border border-gray-300 rounded-xl bg-white flex items-center justify-center">
               <div className="text-center py-8 px-6">
-                <div className="text-3xl font-semibold text-gray-700 mb-2">$2.00</div> <div className="text-2xl font-medium text-gray-500 mb-2">for this article</div>
+                <div className="text-3xl font-semibold text-gray-700 mb-2">$2.00</div>
+                <div className="text-2xl font-medium text-gray-500 mb-2">for this article</div>
                 <p className="text-base text-gray-700 mb-4">Support our investigative journalism with a one-time contribution!</p>
                 <div className="text-sm text-gray-600 space-y-1">
                   <div>• Full access to "Mayor Fuzzy's Fan Empire" story</div>
