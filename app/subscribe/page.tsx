@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 
 const plans = [
   {
@@ -57,8 +58,19 @@ export default function SubscribePage() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-white py-12">
+      <div className="absolute top-6 left-6">
+        <Link href="/" className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          <span className="text-sm font-medium">Back</span>
+        </Link>
+      </div>
       <div className="w-full max-w-6xl mx-auto bg-white p-2 sm:p-8">
-        <h2 className="text-2xl font-bold text-center mb-8">Choose a subscription plan</h2>
+        <div className="flex justify-center mb-4">
+          <img src="/flag-icon.svg" alt="Flag Icon" className="w-12 h-12" />
+        </div>
+        <h2 className="text-3xl font-extrabold text-center mb-8">Choose a subscription plan</h2>
         <div className="flex justify-center gap-2 mb-8">
           {planTypeTabs.map(tab => (
             <button
@@ -79,7 +91,7 @@ export default function SubscribePage() {
           <div className="mb-4 w-full flex flex-col items-center justify-center">
             <div className="w-full max-w-xs mx-auto min-h-[340px] border border-gray-300 rounded-xl bg-white flex items-center justify-center">
               <div className="text-center py-8 px-6">
-                <div className="text-3xl font-semibold text-gray-700 mb-2">$2.00</div>
+                <div className="text-3xl font-semibold text-gray-700 mb-2">$2.00</div> <div className="text-2xl font-medium text-gray-500 mb-2">for this article</div>
                 <p className="text-base text-gray-700 mb-4">Support our investigative journalism with a one-time contribution!</p>
                 <div className="text-sm text-gray-600 space-y-1">
                   <div>• Full access to "Mayor Fuzzy's Fan Empire" story</div>
@@ -110,7 +122,7 @@ export default function SubscribePage() {
                   />
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className={`font-semibold text-base ${selectedPlan === plan.key ? "text-orange-700" : "text-gray-900"}`}>{plan.name}</span>
+                      <span className={`font-medium text-base ${selectedPlan === plan.key ? "text-orange-700" : "text-gray-900"}`}>{plan.name}</span>
                       {selectedPlan === plan.key && (
                         <span className="ml-2">
                           <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#f97316" strokeWidth="2" fill="#fff"/><path d="M7 12.5l3 3 7-7" stroke="#f97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>
