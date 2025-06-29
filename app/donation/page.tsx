@@ -12,6 +12,9 @@ export default function BlogPage() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const router = useRouter();
   const [showCoffeeModal, setShowCoffeeModal] = useState(false);
+  const [coffeeQty, setCoffeeQty] = useState(1);
+  const [message, setMessage] = useState("");
+  const coffeePrice = 5;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -153,18 +156,59 @@ export default function BlogPage() {
             Soon, word spread that the mayor's campaign was powered by both cool breezes and deep-rooted conversations. Voters were charmed, penguins were refreshed, and the trees—well, they stood a little taller, proud to have played a part in the most unusual election Blusterburg had ever seen.
           </p>
 
-          {/* Buy a Coffee Modal */}
+          {/* Buy a Coffee Modal - Orange Theme, Interactive */}
           {showCoffeeModal && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
-              <div className="bg-white rounded-xl shadow-lg p-8 max-w-sm w-full text-center relative">
-                <img src="/flag-icon.svg" alt="Flag Icon" className="w-12 h-12 mx-auto mb-4" />
-                <h2 className="text-xl font-bold mb-2 text-gray-900">Thank you for your support!</h2>
-                <p className="text-gray-600 mb-6">Your coffee keeps the stories flowing. ☕️</p>
+              <div className="bg-white rounded-xl shadow-lg p-6 max-w-xs w-full text-center relative flex flex-col items-center">
+                <div className="w-full flex flex-col items-center">
+                  <span className="text-5xl mb-2 block" role="img" aria-label="coffee">☕️</span>
+                  <h2 className="text-2xl font-extrabold text-gray-900 mb-2">Buy <span className="text-orange-500">Your Writer</span> a coffee</h2>
+                </div>
+                <div className="w-full flex flex-col items-center bg-orange-50 rounded-lg py-3 px-2 mb-4">
+                  <div className="flex items-center justify-center w-full">
+                    <span className="text-3xl mr-3" role="img" aria-label="coffee">☕️</span>
+                    <span className="text-lg font-semibold text-gray-700 mr-2">${coffeePrice}</span>
+                    <span className="text-gray-500 mr-2">x</span>
+                    <input
+                      type="number"
+                      min={1}
+                      value={coffeeQty}
+                      onChange={e => setCoffeeQty(Math.max(1, parseInt(e.target.value) || 1))}
+                      className="w-12 text-center border border-gray-300 rounded px-1 py-0.5 mr-3 focus:outline-none focus:ring-2 focus:ring-orange-200"
+                    />
+                    {[1, 3, 5].map(n => (
+                      <button
+                        key={n}
+                        type="button"
+                        className={`mx-1 px-3 py-1 rounded-full border transition text-base font-semibold ${coffeeQty === n ? 'bg-orange-500 text-white border-orange-500' : 'bg-orange-50 text-orange-500 border-orange-200 hover:bg-orange-100'}`}
+                        onClick={() => setCoffeeQty(n)}
+                      >
+                        {n}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                <div className="w-full flex flex-col items-center mb-4">
+                  <textarea
+                    className="w-full border border-gray-200 rounded-lg p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-200"
+                    rows={2}
+                    placeholder="Say something nice.. (optional)"
+                    value={message}
+                    onChange={e => setMessage(e.target.value)}
+                  />
+                </div>
                 <button
-                  className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-2 rounded-lg text-base transition"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-lg text-lg transition mb-2"
                   onClick={() => setShowCoffeeModal(false)}
                 >
-                  Close
+                  Support  ${coffeeQty * coffeePrice}
+                </button>
+                <button
+                  className="absolute top-2 right-2 text-gray-400 hover:text-gray-700 text-xl font-bold px-2"
+                  onClick={() => setShowCoffeeModal(false)}
+                  aria-label="Close"
+                >
+                  ×
                 </button>
               </div>
             </div>
@@ -190,12 +234,17 @@ export default function BlogPage() {
 
           {/* Buy a Coffee Block (Paywall Replacement) - At the very end */}
           <div className="flex items-center bg-white border border-gray-200 rounded-xl shadow-sm p-4 my-8">
-            <img src="/flag-icon.svg" alt="Flag Icon" className="w-16 h-16 rounded-md object-cover mr-4" />
+            <img src="/flag-icon.svg" alt="flag" className="w-12 h-12 mx-4 mb-4 block" />
             <div className="flex-1">
               <div className="font-semibold text-lg text-gray-900 mb-1">Support your favorite writer by buying them a coffee!</div>
               <div className="text-gray-500 text-sm mb-2">Every coffee helps keep the stories flowing.</div>
             </div>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-2 rounded-lg text-base transition">Buy a coffee</button>
+            <button
+              className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-2 rounded-lg text-base transition"
+              onClick={() => setShowCoffeeModal(true)}
+            >
+              Buy a coffee
+            </button>
           </div>
 
           {/* Navigation */}
