@@ -92,20 +92,20 @@ export default function HeartsPage() {
             className="text-4xl md:text-5xl text-gray-900 mb-6 leading-tight"
             style={{ fontFamily: "Georgia, serif" }}
           >
-            No Scandals: The Mayor's Fund Story (Part I)
+            The Last Letter
           </h1>
           <h2 className="text-sm text-gray-500 mb-6 leading-snug">
-            Mayor Fuzzy McLobbyist, led by Vice President Sally Filibuster, has ascended to the pinnacle of City Hall. Its fundamental genius is wanting donuts at every meeting.
+            A short fiction about love, memory, and the courage to say goodbye.
           </h2>
           {/* Author Info */}
           <div className="flex items-center gap-3 mb-6">
             <Avatar className="w-10 h-10">
-              <AvatarImage src="/placeholder-user.jpg" alt="Bobby Filibuster" />
-              <AvatarFallback>BF</AvatarFallback>
+              <AvatarImage src="/placeholder-user.jpg" alt="Avery Lane" />
+              <AvatarFallback>AL</AvatarFallback>
             </Avatar>
             <div>
-              <div className="text-sm font-medium text-gray-900">Bobby Filibuster</div>
-              <div className="text-sm text-gray-500">Apr 1, 2026 • Paid</div>
+              <div className="text-sm font-medium text-gray-900">Avery Lane</div>
+              <div className="text-sm text-gray-500">Feb 14, 2027 • Fiction</div>
             </div>
           </div>
           {/* Engagement Bar */}
@@ -113,11 +113,11 @@ export default function HeartsPage() {
             <div className="flex items-center gap-4">
               <button className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors border border-gray-300 hover:border-gray-400 px-3 py-1.5 rounded-full">
                 <Heart className="w-4 h-4" />
-                <span className="text-sm">385</span>
+                <span className="text-sm">1,024</span>
               </button>
               <button className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors border border-gray-300 hover:border-gray-400 px-3 py-1.5 rounded-full">
                 <MessageSquare className="w-5 h-5" />
-                <span className="text-sm">22</span>
+                <span className="text-sm">87</span>
               </button>
               <button className="text-gray-600 hover:text-gray-900 transition-colors border border-gray-300 hover:border-gray-400 p-2 rounded-full">
                 <Repeat2 className="w-4 h-4" />
@@ -137,29 +137,26 @@ export default function HeartsPage() {
         {/* Article Content */}
         <article className="prose prose-lg max-w-none" style={{ fontFamily: "Georgia, serif" }}>
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            Friends,
+            The letter sat on the windowsill, trembling in the morning breeze. It was the last thing she wrote before the world changed, before the city's lights flickered out and the trains stopped running. The envelope was pale pink, the color of cherry blossoms, and her name was written in a hand he'd memorized long ago.
           </p>
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            In the wild and windy city of Blusterburg, Mayor Fuzzy McLobbyist's campaign was unlike any other. Instead of the usual bake sales and rubber chicken dinners, the mayor funded his entire campaign by selling battery-powered fans to penguins at the local zoo. "Penguins love a good breeze," he declared, as he handed out fans with his face on them to every tuxedoed bird in sight.
+            He read it every morning, just as the sun crested the rooftops. "If you find this, I hope you remember the way we laughed in the rain, the way you always made the coffee too strong, the way you said goodbye like it was a promise."
           </p>
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            But that was only the beginning. When the penguins ran out of pockets to store their fans, the mayor turned to the city's ancient oak trees for advice. Every Tuesday at dawn, he could be found in the park, whispering his campaign slogans to the trees and listening intently for their wooden wisdom. "The secret to a successful campaign," he confided to a particularly knotty elm, "is to always leaf your options open."
+            The city was quieter now. He walked the empty streets, the letter folded in his pocket, and watched the world move on. Sometimes he thought he saw her in the crowd—a flash of red hair, a laugh that echoed—but it was always just memory, playing tricks.
           </p>
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            Soon, word spread that the mayor's campaign was powered by both cool breezes and deep-rooted conversations. Voters were charmed, penguins were refreshed, and the trees—well, they stood a little taller, proud to have played a part in the most unusual election Blusterburg had ever seen.
+            On the last day of winter, he left a reply on the windowsill. "I remember. I always will."
           </p>
           <hr className="my-8 border-gray-200" />
           <h1 className="text-3xl font-bold text-gray-900 mb-6" style={{ fontFamily: "Georgia, serif" }}>
-            Part I: The Penguin Parade
+            Epilogue
           </h1>
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            On the first day of campaign season, Mayor Fuzzy McLobbyist donned his finest top hat and marched straight to the zoo, where the annual Penguin Parade was about to begin. The air was electric, the fish were fresh, and the penguins were ready to waddle for democracy.
+            Spring arrived quietly, with petals drifting through the open window. He found himself smiling at strangers, letting the city's new rhythm carry him forward. The letter remained, but it was no longer a weight—just a memory, folded and cherished, as he stepped into the gentle light of tomorrow.
           </p>
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            As the mayor handed out fans to the penguins, a hush fell over the crowd. Would the penguins accept the fans? Would they endorse the mayor's donut agenda? Suddenly, Paddles the Penguin, known for his impeccable sense of style and his ability to balance a sardine on his beak, stepped forward and gave a resounding squawk of approval.
-          </p>
-          <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            The crowd erupted in applause. The trees rustled their leaves in excitement. Even the squirrels paused their acorn business to watch the spectacle. It was clear: the mayor's campaign was off to a flapping good start, and Blusterburg would never be the same.
+            Sometimes, love is not about holding on, but about letting go and believing in the beauty of what comes next.
           </p>
           {/* Give Some Love Block (Paywall Replacement) - At the very end */}
           <div className="flex items-center bg-white border border-gray-200 rounded-xl shadow-sm p-4 my-8">

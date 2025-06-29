@@ -14,7 +14,7 @@ export default function MatchaPage() {
   const [showCoffeeModal, setShowCoffeeModal] = useState(false);
   const [coffeeQty, setCoffeeQty] = useState(1);
   const [message, setMessage] = useState("");
-  const coffeePrice = 4.99;
+  const coffeePrice = 3.5;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -92,20 +92,20 @@ export default function MatchaPage() {
             className="text-4xl md:text-5xl text-gray-900 mb-6 leading-tight"
             style={{ fontFamily: "Georgia, serif" }}
           >
-            No Scandals: The Mayor's Fund Story (Part I)
+            Matcha, Memes, and Media: A Frothy Culture
           </h1>
           <h2 className="text-sm text-gray-500 mb-6 leading-snug">
-            Mayor Fuzzy McLobbyist, led by Vice President Sally Filibuster, has ascended to the pinnacle of City Hall. Its fundamental genius is wanting donuts at every meeting.
+            A playful look at how matcha became the internet's favorite drink—and what it says about culture, trends, and the art of going viral.
           </h2>
           {/* Author Info */}
           <div className="flex items-center gap-3 mb-6">
             <Avatar className="w-10 h-10">
-              <AvatarImage src="/placeholder-user.jpg" alt="Bobby Filibuster" />
-              <AvatarFallback>BF</AvatarFallback>
+              <AvatarImage src="/placeholder-user.jpg" alt="Casey Chai" />
+              <AvatarFallback>CC</AvatarFallback>
             </Avatar>
             <div>
-              <div className="text-sm font-medium text-gray-900">Bobby Filibuster</div>
-              <div className="text-sm text-gray-500">Apr 1, 2026 • Paid</div>
+              <div className="text-sm font-medium text-gray-900">Casey Chai</div>
+              <div className="text-sm text-gray-500">May 5, 2027 • Culture & Media</div>
             </div>
           </div>
           {/* Engagement Bar */}
@@ -113,11 +113,11 @@ export default function MatchaPage() {
             <div className="flex items-center gap-4">
               <button className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors border border-gray-300 hover:border-gray-400 px-3 py-1.5 rounded-full">
                 <Heart className="w-4 h-4" />
-                <span className="text-sm">385</span>
+                <span className="text-sm">2,222</span>
               </button>
               <button className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors border border-gray-300 hover:border-gray-400 px-3 py-1.5 rounded-full">
-                <MessageSquare className="w-4 h-4" />
-                <span className="text-sm">22</span>
+                <MessageSquare className="w-5 h-5" />
+                <span className="text-sm">123</span>
               </button>
               <button className="text-gray-600 hover:text-gray-900 transition-colors border border-gray-300 hover:border-gray-400 p-2 rounded-full">
                 <Repeat2 className="w-4 h-4" />
@@ -137,42 +137,39 @@ export default function MatchaPage() {
         {/* Article Content */}
         <article className="prose prose-lg max-w-none" style={{ fontFamily: "Georgia, serif" }}>
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            Friends,
+            Once upon a time, tea was just tea. Then came matcha—the green powder that launched a thousand Instagram posts and turned every coffee shop into a stage for whisking, pouring, and foam art. But how did matcha go from ancient ritual to meme-worthy media darling?
           </p>
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            In the wild and windy city of Blusterburg, Mayor Fuzzy McLobbyist's campaign was unlike any other. Instead of the usual bake sales and rubber chicken dinners, the mayor funded his entire campaign by selling battery-powered fans to penguins at the local zoo. "Penguins love a good breeze," he declared, as he handed out fans with his face on them to every tuxedoed bird in sight.
+            The answer, like a good matcha, is layered. In Japan, matcha is centuries old—a drink for monks, poets, and samurai. In the West, it's a symbol of wellness, mindfulness, and, let's be honest, a little bit of flexing. (If your latte isn't green, are you even online?)
           </p>
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            But that was only the beginning. When the penguins ran out of pockets to store their fans, the mayor turned to the city's ancient oak trees for advice. Every Tuesday at dawn, he could be found in the park, whispering his campaign slogans to the trees and listening intently for their wooden wisdom. "The secret to a successful campaign," he confided to a particularly knotty elm, "is to always leaf your options open."
+            Social media did for matcha what it did for cats and sourdough: it made it famous, funny, and a little bit weird. There are matcha memes, matcha TikToks, matcha conspiracy theories ("Big Tea is watching!"), and more matcha hashtags than you can shake a bamboo whisk at.
           </p>
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            Soon, word spread that the mayor's campaign was powered by both cool breezes and deep-rooted conversations. Voters were charmed, penguins were refreshed, and the trees—well, they stood a little taller, proud to have played a part in the most unusual election Blusterburg had ever seen.
+            But here's the thing: every time you post a matcha, you're not just sharing a drink—you're sharing a vibe. You're saying, "I'm chill, I'm cultured, and I know how to froth." In a world of hot takes, matcha is the cool, green middle ground. Sip slow, scroll slower, and remember: the real matcha was the friends we made along the way.
           </p>
           <hr className="my-8 border-gray-200" />
           <h1 className="text-3xl font-bold text-gray-900 mb-6" style={{ fontFamily: "Georgia, serif" }}>
-            Part I: The Penguin Parade
+            The Matcha Meme-ifesto
           </h1>
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            On the first day of campaign season, Mayor Fuzzy McLobbyist donned his finest top hat and marched straight to the zoo, where the annual Penguin Parade was about to begin. The air was electric, the fish were fresh, and the penguins were ready to waddle for democracy.
+            From Kyoto tea houses to Brooklyn pop-ups, matcha's journey is a global one. It's a drink that's both ancient and brand new, a symbol of tradition and a meme in a mug. Somewhere between a wellness ritual and a TikTok trend, matcha found its sweet spot—frothy, photogenic, and always ready for its close-up.
           </p>
           <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            As the mayor handed out fans to the penguins, a hush fell over the crowd. Would the penguins accept the fans? Would they endorse the mayor's donut agenda? Suddenly, Paddles the Penguin, known for his impeccable sense of style and his ability to balance a sardine on his beak, stepped forward and gave a resounding squawk of approval.
+            So next time you sip, remember: you're not just drinking tea, you're part of a worldwide inside joke. #MatchaMeme
           </p>
-          <p className="text-gray-800 leading-relaxed mb-6 text-lg">
-            The crowd erupted in applause. The trees rustled their leaves in excitement. Even the squirrels paused their acorn business to watch the spectacle. It was clear: the mayor's campaign was off to a flapping good start, and Blusterburg would never be the same.
-          </p>
-          {/* Buy a Coffee Block (Paywall Replacement) - At the very end */}
+          {/* Send a Matcha Block (Paywall Replacement) - At the very end */}
           <div className="flex items-center bg-white border border-gray-200 rounded-xl shadow-sm p-4 my-8">
-            <img src="/flag-icon.svg" alt="flag" className="w-12 h-12 mx-4 mb-4 block" />
+            <span className="text-5xl mx-4 mb-4 block" role="img" aria-label="matcha">🍵</span>
             <div className="flex-1">
-              <div className="font-semibold text-lg text-gray-900 mb-1">Support your favorite writer by buying them a coffee!</div>
-              <div className="text-gray-500 text-sm mb-2">Every coffee helps keep the stories flowing.</div>
+              <div className="font-semibold text-lg text-gray-900 mb-1">Support your favorite writer by sending them a matcha!</div>
+              <div className="text-gray-500 text-sm mb-2">Every matcha keeps the words frothy and the puns steeped. (No tea, no shade!)</div>
             </div>
             <button
               className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-2 rounded-lg text-base transition"
               onClick={() => setShowCoffeeModal(true)}
             >
-              Buy a coffee
+              Send a matcha
             </button>
           </div>
           {/* Buy a Coffee Modal - Orange Theme, Interactive */}
@@ -180,12 +177,12 @@ export default function MatchaPage() {
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
               <div className="bg-white rounded-xl shadow-lg p-6 max-w-md w-full text-center relative flex flex-col items-center">
                 <div className="w-full flex flex-col items-center">
-                  <span className="text-5xl mb-2 block" role="img" aria-label="coffee">☕️</span>
-                  <h2 className="text-2xl font-extrabold text-gray-900 mb-2">Buy <span className="text-orange-500">Your Writer</span> a coffee</h2>
+                  <span className="text-5xl mb-2 block" role="img" aria-label="matcha">🍵</span>
+                  <h2 className="text-2xl font-extrabold text-gray-900 mb-2">Send <span className="text-green-600">Your Writer</span> a matcha</h2>
                 </div>
                 <div className="w-full flex justify-center mb-4">
                   <div className="flex flex-wrap items-center bg-orange-50 rounded-lg px-4 py-3 gap-x-2 gap-y-2 w-full justify-center">
-                    <span className="text-3xl mr-3" role="img" aria-label="coffee">☕️</span>
+                    <span className="text-3xl mr-3" role="img" aria-label="matcha">🍵</span>
                     <span className="text-lg font-semibold text-gray-700 mr-2">${coffeePrice}</span>
                     <span className="text-gray-500 mr-2">x</span>
                     <input
@@ -221,7 +218,7 @@ export default function MatchaPage() {
                   className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-lg text-lg transition mb-2"
                   onClick={() => setShowCoffeeModal(false)}
                 >
-                  Support  ${Math.ceil(coffeeQty * coffeePrice)}
+                  Whisk it!  ${Math.ceil(coffeeQty * coffeePrice)}
                 </button>
                 <button
                   className="absolute top-2 right-2 text-gray-400 hover:text-gray-700 text-xl font-bold px-2"
